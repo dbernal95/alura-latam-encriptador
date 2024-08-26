@@ -135,8 +135,7 @@ var mostrarToast = function (toastType, mensaje) {
     // Ocultar el toast despues de 5 segundos
     setTimeout(() => {
         toast.classList.remove('show'); // Ocultar el toast
-        toast.style.display = 'none';
-        display 
+        toast.style.display = 'none';        
     }, 5000);
 }
 
