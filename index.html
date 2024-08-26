@@ -1,7 +1,85 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <!-- Enlace a Bulma CSS local -->
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="is-flex is-flex-direction-column">
+    <div class="toast" id="toast-success">¡Notificación Exito!</div>
+    <div class="toast" id="toast-warning">¡Notificación Advertencia!</div>
+    <div class="toast" id="toast-error">¡Notificación Error!</div>
+
+    <div class="container">
+        <div class="is-flex is-justify-content-space-between box is-align-items-center">
+
+            <h1 class="title">Encriptador de texto</h1>
+            <!-- Cambiar de tema -->
+
+            <div class="dropdown is-hoverable is-right">
+                <div class="dropdown-trigger">
+                    <span class="icon">
+                        <i class="fas fa-moon" id="actualTema"></i>
+                    </span>
+                </div>
+                <div class="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                        <div class="dropdown-item">
+                            <span class="moon-icon elegirTema dark">
+                                <i class="fas fa-moon"></i> Oscuro
+                            </span>
+                        </div>
+                        <div class="dropdown-item">
+                            <span class="sun-icon elegirTema light">
+                                <i class="fa-regular fa-sun"></i> Claro
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Cuadros de texto -->
+        <div class="field box">
+            <label class="label" for="texto">Texto:</label>
+            <div class="control">
+                <textarea id="textoIngresado" class="textarea" placeholder="Ingresa el texto aquí"></textarea>
+            </div>
+            <div class="control mt-2">
+                <button id="encriptarBtn" class="button is-primary mr-1">Encriptar</button>
+                <button id="desencriptarBtn" class="button is-link ml-1">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="field box">
+            <label class="label" for="resultado">Resultado:</label>
+            <div class="control">
+                <textarea id="resultado" class="textarea" readonly></textarea>
+            </div>
+            <div class="control mt-2">
+                <button id="copiarBtn" class="button is-info" disabled>Copiar texto!</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- El contenido del footer se actualizará con JavaScript -->
+    <footer>
+        <div class="content has-text-centered">
+            <p>
+                <strong id="footer"></strong>
+            </p>
+        </div>
+    </footer>
+
+    <script src="./js/index.js" defer></script>
 </body>
+
 </html>
