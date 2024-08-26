@@ -130,10 +130,13 @@ var mostrarToast = function (toastType, mensaje) {
     const toast = document.getElementById(`toast-${toastType}`);
     toast.textContent = mensaje;
     toast.classList.add('show'); // Mostrar el toast
+    toast.style.display = 'block';
 
     // Ocultar el toast despues de 5 segundos
     setTimeout(() => {
         toast.classList.remove('show'); // Ocultar el toast
+        toast.style.display = 'none';
+        display 
     }, 5000);
 }
 
